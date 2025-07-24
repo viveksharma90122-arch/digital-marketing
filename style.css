@@ -1,4 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Open+Sans&display=swap');
+
+:root {
+  --primary: #00ffe7;
+  --background: #0c0f1e;
+  --card: #12172b;
+  --text-light: #cbd5e1;
+  --heading: #ffffff;
+}
 
 * {
   margin: 0;
@@ -7,30 +15,31 @@
 }
 
 body {
-  font-family: 'Orbitron', sans-serif;
-  background-color: #0a0f1c;
-  color: #e0e0e0;
-  line-height: 1.6;
-  padding: 20px;
+  font-family: 'Open Sans', sans-serif;
+  background: var(--background);
+  color: var(--text-light);
+  line-height: 1.8;
+  padding: 0 16px;
 }
 
 header {
+  background-color: var(--card);
   text-align: center;
-  padding: 30px 0;
-  background: #111831;
-  border-bottom: 2px solid #1f3b6f;
-  box-shadow: 0 0 10px rgba(0,255,255,0.1);
+  padding: 30px 20px;
+  border-bottom: 1px solid #1f3b6f;
+  box-shadow: 0 2px 10px rgba(0, 255, 255, 0.1);
 }
 
 header h1 {
-  font-size: 2.5rem;
-  color: #00fff7;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.8rem;
+  color: var(--primary);
 }
 
 header p {
-  font-size: 1.2rem;
-  color: #aaa;
+  font-size: 1.1rem;
   margin-top: 10px;
+  color: #999;
 }
 
 nav {
@@ -38,46 +47,47 @@ nav {
 }
 
 nav a {
-  margin: 0 15px;
+  color: var(--primary);
+  margin: 0 12px;
   text-decoration: none;
-  color: #00f7ff;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 1rem;
   transition: color 0.3s;
 }
 
 nav a:hover {
-  color: #0ff;
-  text-shadow: 0 0 5px #0ff;
+  color: #00e1ff;
 }
 
 section {
-  max-width: 800px;
+  max-width: 900px;
   margin: 40px auto;
-  padding: 20px;
-  background: #101b30;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,255,255,0.05);
+  background: var(--card);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.05);
 }
 
 section h3 {
+  font-family: 'Orbitron', sans-serif;
   font-size: 1.5rem;
-  color: #0ef;
   margin-bottom: 15px;
-  border-bottom: 2px solid #0ef;
-  padding-bottom: 5px;
+  color: var(--primary);
+  border-bottom: 1px solid var(--primary);
+  padding-bottom: 6px;
 }
 
 ul {
-  list-style: square inside;
-  padding-left: 0;
+  list-style: disc;
+  padding-left: 20px;
 }
 
 ul li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 a {
-  color: #0ef;
+  color: var(--primary);
   text-decoration: none;
 }
 
@@ -87,20 +97,9 @@ a:hover {
 
 .profile {
   display: block;
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   object-fit: cover;
   margin: 0 auto 20px;
-  border: 2px solid #0ef;
-  box-shadow: 0 0 20px rgba(0,255,255,0.3);
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  color: #666;
-  font-size: 0.9rem;
-  margin-top: 40px;
-  border-top: 1px solid #1a2e4f;
-}
+  border: 3px solid var
