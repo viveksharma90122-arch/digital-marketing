@@ -13,6 +13,34 @@
       background: #f9f9f9;
       color: #333;
     }
+    nav {
+      background-color: #0077b5;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .logo {
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      text-decoration: none;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
     .container {
       max-width: 900px;
       margin: 40px auto;
@@ -59,11 +87,20 @@
 </head>
 <body>
 
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="index.html" class="logo">Vivek Sharma</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
   <div class="container">
     <h1>From MCA to Marketing: My Digital Transformation Journey</h1>
     <p class="meta">🗓️ Published on July 24, 2025 | ✍️ By Vivek Sharma</p>
-    
-    <!-- Updated image -->
     <img src="https://img.freepik.com/free-photo/marketing-strategy-planning-strategy-concept_53876-124948.jpg?w=1380&t=st=1721800000~exp=1721800600~hmac=0fc4d0b5c10b0b431ce03dbac8de3df37652fcf35e2fd92a5a045e6c06e92e67" 
          alt="Digital Marketing Strategy" class="blog-image" />
 
