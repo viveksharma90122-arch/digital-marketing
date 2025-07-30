@@ -5,33 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Vivek Sharma - Professional Experience" />
   <title>Experience - Vivek Sharma</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f5f7fa;
-      color: #333;
+    /* These styles ensure sections look like your new home page */
+    body.dark {
+      background-color: #121212;
+      color: #ddd;
     }
     header {
-      background: linear-gradient(to right, #0077b5, #005582);
+      background: linear-gradient(to right, #0077b5, #004466);
       color: white;
       padding: 50px 20px;
       text-align: center;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+    section {
+      background: #1e1e1e;
+      margin: 30px auto;
+      padding: 25px;
+      max-width: 900px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    body.light section {
+      background: #fff;
+      color: #333;
+    }
+    h2 {
+      color: #00aaff;
+      margin-bottom: 20px;
+    }
+    h3 {
+      color: #ffcc00;
+      margin-top: 20px;
     }
     nav {
-      background: #fff;
+      background: #222;
       padding: 12px 20px;
       text-align: center;
       position: sticky;
       top: 0;
       z-index: 100;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     nav a {
       margin: 0 15px;
-      color: #0077b5;
+      color: #00aaff;
       text-decoration: none;
       font-weight: bold;
       font-size: 16px;
@@ -39,42 +57,26 @@
     nav a:hover {
       color: #ff9800;
     }
-    section {
-      background: #fff;
-      margin: 30px auto;
-      padding: 25px;
-      max-width: 900px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
-    h2 {
-      color: #0077b5;
-      border-left: 5px solid #ff9800;
-      padding-left: 10px;
-      margin-bottom: 20px;
-    }
-    h3 {
-      color: #005582;
-      margin-top: 25px;
-      font-size: 22px;
-    }
-    ul {
-      font-size: 18px;
-    }
-    p {
-      line-height: 1.6;
-      margin: 10px 0 20px;
+    #theme-toggle {
+      background: #00aaff;
+      color: #fff;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
     }
     footer {
       text-align: center;
       padding: 20px;
-      background: #eaeaea;
+      background: #222;
+      color: #aaa;
       margin-top: 40px;
       font-size: 14px;
     }
   </style>
 </head>
-<body>
+<body class="dark">
   <header>
     <h1>Experience</h1>
     <p>My professional work history and roles</p>
@@ -86,50 +88,44 @@
     <a href="projects.html">Projects</a>
     <a href="blog.html">Blog</a>
     <a href="contact.html">Contact</a>
+    <button id="theme-toggle">Light Mode</button>
   </nav>
 
   <section>
-    <h2>Experience</h2>
+    <h2>Professional Experience</h2>
 
     <h3>Digital Marketing Intern – Shivah Web Tech (Jul 2025 – Present)</h3>
     <p>
-      During my ongoing internship at Shivah Web Tech, I am gaining in-depth knowledge and hands-on
-      experience in digital marketing strategies. My primary focus has been on SEO optimization, keyword research,
-      on-page and off-page techniques, content creation, and analytics. I actively work on social media management,
-      designing engaging creatives using Canva, and monitoring campaign performance using tools like Google Analytics
-      and Google Search Console.
-    </p>
-    <p>
-      Through this role, I have been exposed to real-world client projects where I assist in planning, executing,
-      and optimizing online campaigns to boost brand visibility. This internship has strengthened my analytical and
-      creative skills, teaching me how to combine data insights with innovative marketing strategies for maximum impact.
+      At Shivah Web Tech, I work on SEO, keyword research, on-page and off-page optimization, content creation,
+      analytics, and social media campaigns. This role is helping me gain hands-on knowledge about digital growth strategies.
     </p>
 
     <h3>Data Analyst – Adreno Technologies (May – Jun 2023)</h3>
     <p>
-      As a Data Analyst intern, I worked on data cleaning, organizing, and interpreting datasets to support internal
-      decision-making processes. I developed reports and dashboards to visualize patterns and insights, helping
-      teams better understand customer behaviors and trends.
-    </p>
-    <p>
-      This experience gave me an opportunity to apply my analytical skills, enhance my knowledge of Excel and basic
-      data tools, and understand how data-driven decision-making impacts overall business strategies.
+      As a Data Analyst intern, I worked with datasets to analyze trends, build dashboards and reports, and provide insights
+      for better decision-making. This strengthened my analytical skills and data interpretation techniques.
     </p>
 
     <h3>Customer Service Associate – Teleperformance (Feb – Mar 2023)</h3>
     <p>
-      Working at Teleperformance taught me the importance of communication, patience, and problem-solving in a
-      fast-paced environment. My responsibilities included assisting customers with queries, resolving issues,
-      and ensuring customer satisfaction while following company protocols.
-    </p>
-    <p>
-      This role honed my interpersonal skills and adaptability, qualities that continue to help me in every
-      professional role I take on.
+      I worked in customer service, improving my communication and problem-solving skills while handling customer inquiries
+      and resolving issues in a fast-paced environment.
     </p>
   </section>
 
   <footer>
     &copy; 2025 Vivek Sharma. All rights reserved.
   </footer>
+
+  <script>
+    const toggleButton = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    toggleButton.addEventListener('click', () => {
+      body.classList.toggle('light');
+      body.classList.toggle('dark');
+      toggleButton.textContent = body.classList.contains('light') ? 'Dark Mode' : 'Light Mode';
+    });
+  </script>
 </body>
 </html>
