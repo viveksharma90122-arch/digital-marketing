@@ -5,61 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Vivek Sharma - Digital Marketing Professional and MCA Graduate" />
   <title>Vivek Sharma | Digital Marketing Professional</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
+    * { box-sizing: border-box; }
+    html {
+      scroll-behavior: smooth;
+    }
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
       background: #f5f7fa;
       color: #333;
+      transition: background 0.3s, color 0.3s;
+    }
+    body.dark {
+      background: #1e1e1e;
+      color: #f5f5f5;
     }
     header {
-      background: linear-gradient(to right, #0077b5, #005582);
+      background: url('img.jpg') center/cover no-repeat;
       color: white;
-      padding: 50px 20px;
+      padding: 70px 20px;
       text-align: center;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
       position: relative;
     }
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 55, 100, 0.7);
+      z-index: 1;
+    }
+    header * { position: relative; z-index: 2; }
     .profile-img {
-      width: 150px;
-      border-radius: 50%;
-      margin-bottom: 15px;
-      border: 4px solid white;
+      width: 150px; border-radius: 50%;
+      margin-bottom: 15px; border: 4px solid white;
       box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     }
-    h1 {
-      margin: 10px 0 5px;
-      font-size: 2.5em;
-    }
+    h1 { margin: 10px 0 5px; font-size: 2.5em; }
     .badge {
-      display: inline-block;
-      background: #ffce00;
-      color: #222;
-      padding: 6px 14px;
-      font-weight: bold;
-      border-radius: 20px;
-      font-size: 14px;
-      margin-top: 8px;
+      display: inline-block; background: #ffce00; color: #222;
+      padding: 6px 14px; font-weight: bold;
+      border-radius: 20px; font-size: 14px; margin-top: 8px;
     }
-    p.subtitle {
-      font-size: 18px;
-      margin-top: 10px;
-    }
+    p.subtitle { font-size: 18px; margin-top: 10px; }
     .btn {
-      background: #25d366;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 6px;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 15px;
-      font-weight: bold;
-      transition: background 0.3s;
+      background: #25d366; color: white;
+      padding: 10px 20px; border-radius: 6px;
+      text-decoration: none; display: inline-block;
+      margin-top: 15px; font-weight: bold; transition: background 0.3s;
     }
-    .btn:hover {
-      background: #1da851;
-    }
+    .btn:hover { background: #1da851; }
+
     nav {
       background: #fff;
       padding: 12px 20px;
@@ -68,31 +66,51 @@
       top: 0;
       z-index: 100;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
     }
+    body.dark nav { background: #2c2c2c; }
     nav a {
-      margin: 0 15px;
-      color: #0077b5;
-      text-decoration: none;
+      color: #0077b5; text-decoration: none;
+      font-weight: bold; font-size: 16px;
+    }
+    nav a:hover { color: #ff9800; }
+
+    /* Theme toggle button */
+    .theme-toggle {
+      cursor: pointer;
+      padding: 8px 14px;
+      background: #0077b5;
+      color: white;
+      border: none;
+      border-radius: 20px;
       font-weight: bold;
-      font-size: 16px;
+      transition: background 0.3s;
     }
-    nav a:hover {
-      color: #ff9800;
-    }
-    section {
+    .theme-toggle:hover { background: #005582; }
+
+    section { margin: 30px auto; max-width: 1000px; padding: 20px; }
+    .card {
       background: #fff;
-      margin: 30px auto;
-      padding: 25px;
-      max-width: 900px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      padding: 25px;
+      margin-bottom: 25px;
+      transition: transform 0.5s ease, opacity 0.8s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      transform: translateY(30px);
     }
+    body.dark .card { background: #2c2c2c; }
+    .card.visible { opacity: 1; transform: translateY(0); }
+    .card:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
     h2 {
-      color: #0077b5;
-      border-left: 5px solid #ff9800;
-      padding-left: 10px;
-      margin-bottom: 15px;
+      font-size: 28px; color: #0077b5;
+      text-align: center; margin-bottom: 30px;
     }
+    h3 { color: inherit; margin-top: 0; margin-bottom: 15px; font-size: 20px; }
+    h3 span { margin-right: 8px; }
     footer {
       text-align: center;
       padding: 20px;
@@ -100,16 +118,14 @@
       margin-top: 40px;
       font-size: 14px;
     }
-    ul li {
-      margin-bottom: 10px;
-    }
-    a.company-link {
-      color: #0077b5;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    a.company-link:hover {
-      text-decoration: underline;
+    body.dark footer { background: #2c2c2c; }
+    ul li { margin-bottom: 10px; }
+    a.company-link { color: #0077b5; text-decoration: none; font-weight: bold; }
+    a.company-link:hover { text-decoration: underline; }
+
+    @media (max-width: 768px) {
+      nav { flex-wrap: wrap; }
+      h1 { font-size: 2em; }
     }
   </style>
 </head>
@@ -122,52 +138,87 @@
     <a href="https://wa.me/919012285865" class="btn">Chat on WhatsApp</a>
   </header>
 
-  <!-- Updated nav with separate pages -->
   <nav>
     <a href="index.html">Home</a>
     <a href="experience.html">Experience</a>
     <a href="projects.html">Projects</a>
     <a href="blog.html">Blog</a>
     <a href="contact.html">Contact</a>
+    <button class="theme-toggle">Dark Mode</button>
   </nav>
 
   <section>
-    <h2>Welcome to my website</h2>
-    <p>
-      Hello! I’m Vivek Sharma, a passionate and aspiring digital marketing professional with a vision to build a successful career in the dynamic world of online marketing. 
+    <h2>Welcome to My Website</h2>
+
+    <div class="card">
+      <h3><span>👤</span>Who I Am</h3>
+      <p>Hello! I’m Vivek Sharma, a passionate and aspiring digital marketing professional with a vision to build a successful career in the dynamic world of online marketing. 
       I have completed my Master of Computer Applications (MCA) and am currently working as a Digital Marketing Intern at 
       <a href="https://www.shivahwebtech.com/digital-marketing" target="_blank" class="company-link">Shivah Web Tech</a> in Mohali. 
-      My academic background includes a Bachelor’s degree in Computer Applications, which gave me a strong foundation in technology, programming, and problem-solving.
-    </p>
-    <p>
-      Over time, I discovered my interest in the creative and analytical side of the digital world. 
+      My academic background includes a Bachelor’s degree in Computer Applications, which gave me a strong foundation in technology, programming, and problem-solving.</p>
+    </div>
+
+    <div class="card">
+      <h3><span>🚀</span>My Digital Marketing Journey</h3>
+      <p>Over time, I discovered my interest in the creative and analytical side of the digital world. 
       While working on projects and learning new tools, I realized that digital marketing combines both creativity and data-driven strategies. 
       It is this blend of art and science that inspired me to pursue a career in this field. 
       At <a href="https://www.shivahwebtech.com/digital-marketing" target="_blank" class="company-link">Shivah Web Tech</a>, I have been gaining hands-on experience in Search Engine Optimization (SEO), Social Media Management, Content Marketing, 
       and various other aspects of digital growth. This internship has given me the opportunity to understand how online businesses operate 
-      and how strategic campaigns can help brands reach the right audience.
-    </p>
-    <p>
-      My journey has also included roles such as Data Analyst at Adreno Technologies and Customer Service Associate at Teleperformance, 
+      and how strategic campaigns can help brands reach the right audience.</p>
+    </div>
+
+    <div class="card">
+      <h3><span>💼</span>Professional Journey</h3>
+      <p>My journey has also included roles such as Data Analyst at Adreno Technologies and Customer Service Associate at Teleperformance, 
       which improved my skills in communication, teamwork, data interpretation, and understanding user needs. 
-      These roles taught me patience and adaptability—qualities that are essential for any professional who wishes to grow in a fast-paced digital environment.
-    </p>
-    <p>
-      My key skills include SEO (On-Page, Off-Page, and Technical), using tools like Google Analytics and Google Search Console, 
+      These roles taught me patience and adaptability—qualities that are essential for any professional who wishes to grow in a fast-paced digital environment.</p>
+    </div>
+
+    <div class="card">
+      <h3><span>⭐</span>Key Skills</h3>
+      <p>My key skills include SEO (On-Page, Off-Page, and Technical), using tools like Google Analytics and Google Search Console, 
       keyword research, writing SEO-friendly content, and creating engaging designs on platforms like Canva. 
       I enjoy working on projects that challenge me to think creatively and strategically at the same time. 
       My goal is to build my expertise in digital marketing and become a versatile professional who can help businesses 
-      improve their online presence through ethical and innovative strategies.
-    </p>
-    <p>
-      Outside of work and studies, I am deeply interested in personal branding, networking, and continuous learning. 
+      improve their online presence through ethical and innovative strategies.</p>
+    </div>
+
+    <div class="card">
+      <h3><span>🌱</span>Beyond Work</h3>
+      <p>Outside of work and studies, I am deeply interested in personal branding, networking, and continuous learning. 
       I believe that in today’s digital era, knowledge and adaptability are the keys to growth. 
-      Through my personal website, I aim to share my journey, showcase my projects, and connect with people who have similar interests in technology and marketing.
-    </p>
+      Through my personal website, I aim to share my journey, showcase my projects, and connect with people who have similar interests in technology and marketing.</p>
+    </div>
   </section>
 
   <footer>
     &copy; 2025 Vivek Sharma. All rights reserved.
   </footer>
+
+  <script>
+    // Card fade-in animation
+    const cards = document.querySelectorAll('.card');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.2 });
+    cards.forEach(card => observer.observe(card));
+
+    // Dark mode toggle
+    const toggleBtn = document.querySelector('.theme-toggle');
+    const body = document.body;
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark');
+      toggleBtn.textContent = 'Light Mode';
+    }
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark');
+      const isDark = body.classList.contains('dark');
+      toggleBtn.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+  </script>
 </body>
 </html>
