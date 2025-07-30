@@ -1,26 +1,160 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vivek Sharma - Projects" />
   <title>Projects - Vivek Sharma</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body.dark {
+      background-color: #121212;
+      color: #ddd;
+    }
+    header {
+      background: linear-gradient(to right, #0077b5, #004466);
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+    section {
+      background: #1e1e1e;
+      margin: 30px auto;
+      padding: 25px;
+      max-width: 900px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      line-height: 1.6;
+    }
+    body.light section {
+      background: #fff;
+      color: #333;
+    }
+    h2 {
+      color: #00aaff;
+      margin-bottom: 20px;
+    }
+    h3 {
+      color: #ffcc00;
+      margin-top: 25px;
+    }
+    nav {
+      background: #222;
+      padding: 12px 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      margin: 0 15px;
+      color: #00aaff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    nav a:hover {
+      color: #ff9800;
+    }
+    #theme-toggle {
+      background: #00aaff;
+      color: #fff;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: #aaa;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+  </style>
 </head>
-<body>
+<body class="dark">
   <header>
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="experience.html">Experience</a>
-  <a href="projects.html">Projects</a>
-  <a href="contact.html">Contact</a>
-</nav>
-</header>
+    <h1>Projects</h1>
+    <p>Explore my academic, internship, and personal projects in detail</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="experience.html">Experience</a>
+    <a href="projects.html">Projects</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <button id="theme-toggle">Light Mode</button>
+  </nav>
+
   <section>
-    <h2>Projects</h2>
-    <ul>
-      <li>One-to-One Chat System using C#</li>
-      <li>Student Report Card in Java</li>
-      <li>Bank Management System in Python</li>
-    </ul>
+    <h2>Highlighted Projects</h2>
+
+    <h3>One-to-One Chat System (C#)</h3>
+    <p>
+      This was one of my favorite projects during my MCA, where I developed a real-time one-to-one chat system using C# and socket programming. 
+      The aim of this project was to create a desktop-based application that allows two users to communicate securely over a network. 
+      The backend handled all the message routing, ensuring that communication remained fast and reliable. 
+      A lot of effort went into designing the interface so that it was simple and user-friendly, with a clean layout and modern color scheme.
+    </p>
+    <p>
+      This project was a turning point for me because it introduced me to concepts like multithreading, 
+      asynchronous communication, and encryption for data security. 
+      By implementing these features, the system was not only responsive but also secure enough to be used in real-world scenarios for private messaging. 
+      Through debugging network issues and ensuring stable connections, I learned how crucial error handling is in real-time systems. 
+      This experience gave me a much deeper appreciation of both backend network programming and creating smooth user experiences.
+    </p>
+
+    <h3>Student Report Card (Java)</h3>
+    <p>
+      The Student Report Card project was developed as a Java desktop application during my academic journey. 
+      Its purpose was to simplify the tedious process of calculating marks, grades, and overall student performance. 
+      This application allowed teachers to input scores for various subjects, and the system automatically computed totals, averages, and grades based on predefined logic. 
+      I used Java Swing for building the graphical user interface, ensuring that it was interactive and easy to navigate.
+    </p>
+    <p>
+      While working on this project, I also explored file handling in Java to store student data securely, 
+      making sure the information could be retrieved easily whenever needed. 
+      It was an excellent way to understand data validation, modular programming, and object-oriented design principles. 
+      This project taught me to think not only as a developer but also from the user’s perspective, 
+      making sure that the software was intuitive and practical for teachers and students alike.
+    </p>
+
+    <h3>Bank Management System (Python)</h3>
+    <p>
+      Another major project that I worked on was the Bank Management System built using Python. 
+      The goal was to simulate basic banking functions like account creation, deposit, withdrawal, and balance checking. 
+      To store data, I created a file-based database using Python’s built-in file handling, ensuring that every transaction was recorded for future reference.
+    </p>
+    <p>
+      This project gave me an opportunity to apply structured programming techniques while also learning about error handling, 
+      exception management, and menu-driven programming. 
+      I also designed a text-based user interface that was simple but effective. 
+      In addition to technical learning, this project improved my problem-solving skills and gave me a chance to practice debugging in Python. 
+      I realized how important it is to write maintainable code that can be easily updated for future requirements, 
+      such as adding new features like loan management or interest calculations.
+    </p>
+
+    <p>
+      These projects, though academic in nature, have shaped my understanding of how software systems are built from scratch. 
+      Each project challenged me in different ways and gave me confidence to work on real-world tasks, 
+      making me ready to handle both technical and analytical challenges in the professional world.
+    </p>
   </section>
-</body>
-</html>
+
+  <footer>
+    &copy; 2025 Vivek Sharma. All rights reserved.
+  </footer>
+
+  <script>
+    const toggleButton = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    toggleButton.addEventListener('click', () => {
+      body.classList.toggle('light');
+      body.classList.toggle('dark');
+      toggleButton.textContent = body.classList.contains('light') ? 'Dark Mode' :
