@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://viveksharma90122-arch.github.io/seo/sitemap.xml
