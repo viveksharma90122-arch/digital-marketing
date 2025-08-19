@@ -2,193 +2,181 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="Stay updated with the latest digital marketing trends. Read Vivek Sharma’s blog on SEO techniques, PPC optimization, content strategy, and real-world tips.">
-  <meta name="keywords" content="SEO, Digital Marketing, PPC, Content Marketing, Vivek Sharma, Blogging">
-  <meta property="og:title" content="Digital Marketing Blog | SEO Tips, PPC Guides & Case Studies" />
-  <meta property="og:description" content="Stay updated with the latest digital marketing trends. Read Vivek Sharma’s blog on SEO techniques, PPC optimization, content strategy, and real-world tips."/>
-  <meta property="og:url" content="https://viveksharma90122-arch.github.io/digital-marketing/blog.html" />
-  <meta property="og:image" content="https://viveksharma90122-arch.github.io/digital-marketing/og-banner.jpg" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Digital Marketing Blog | SEO Tips, PPC Guides & Case Studies">
-  <meta name="twitter:description" content="Stay updated with the latest digital marketing trends. Read Vivek Sharma’s blog on SEO techniques, PPC optimization, content strategy, and real-world tips.">
-  <meta name="twitter:image" content="https://viveksharma90122-arch.github.io/digital-marketing/og-banner.jpg">
-
-  <title>Digital Marketing Blog | SEO Tips, PPC Guides & Case Studies</title>
-  <link rel="icon" type="image/png" href="favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <title>Contact | Vivek Sharma</title>
   <style>
-    body.dark {
-      background-color: #121212;
-      color: #ddd;
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #f0f0f0;
+      line-height: 1.6;
     }
-    body.light {
-      background-color: #f8f9fa;
-      color: #333;
-    }
+
     header {
-      background: linear-gradient(to right, #0077b5, #004466);
-      color: white;
-      padding: 50px 20px;
-      text-align: center;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    }
-    nav {
-      background: #222;
-      padding: 12px 20px;
-      text-align: center;
+      background: #0a0a0a;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
     }
-    nav a {
-      margin: 0 15px;
-      color: #00aaff;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
+    header h1 {
+      color: #00d4ff;
+      font-size: 1.5rem;
+      margin: 0;
     }
-    nav a:hover {
-      color: #ff9800;
-    }
-    #theme-toggle {
-      background: #00aaff;
-      color: #fff;
-      border: none;
-      padding: 6px 12px;
-      border-radius: 20px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    .blog-container {
-      max-width: 1000px;
-      margin: 30px auto;
-      padding: 25px;
-      background-color: #1e1e1e;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    }
-    body.light .blog-container {
-      background: #fff;
-      color: #333;
-    }
-    .blog-title {
-      text-align: center;
-      font-size: 32px;
-      color: #00aaff;
-      margin-bottom: 30px;
-    }
-    .blog-content {
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
       display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      align-items: center;
+      gap: 20px;
     }
-    .blog-photo {
-      flex: 1;
+    nav ul li a {
+      text-decoration: none;
+      color: #f0f0f0;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #00d4ff;
+    }
+
+    .contact-section {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 40px;
+      background: rgba(20, 20, 20, 0.9);
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    }
+    .contact-section h2 {
       text-align: center;
+      margin-bottom: 25px;
+      font-size: 2rem;
+      color: #00d4ff;
     }
-    .blog-photo img {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    form {
+      display: grid;
+      gap: 1.2rem;
     }
-    .blog-text {
-      flex: 2;
-      font-size: 18px;
-      line-height: 1.7;
+    label {
+      font-weight: 600;
+      color: #ccc;
     }
+    input, textarea {
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      outline: none;
+      background: #1c1c1c;
+      color: #fff;
+    }
+    input:focus, textarea:focus {
+      border: 2px solid #00d4ff;
+    }
+    button {
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      color: #fff;
+      background: linear-gradient(135deg, #00d4ff, #007bff);
+      transition: 0.3s;
+    }
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #00d4ff;
+    }
+
+    .social-links {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .social-links a {
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+      background: #1c1c1c;
+      border: 2px solid #00d4ff;
+      color: #00d4ff;
+      transition: 0.3s;
+    }
+    .social-links a:hover {
+      background: #00d4ff;
+      color: #0a0a0a;
+      box-shadow: 0 0 12px #00d4ff;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
-      background: #222;
-      color: #aaa;
-      margin-top: 40px;
-      font-size: 14px;
-    }
-    @media (max-width: 768px) {
-      .blog-content { flex-direction: column; }
+      background: #0a0a0a;
+      color: #999;
+      margin-top: 50px;
+      font-size: 0.9rem;
     }
   </style>
 </head>
-<body class="dark">
+<body>
 
+  <!-- Navbar -->
   <header>
-    <h1>Blog</h1>
-    <p>Insights, Experiences, and My Journey</p>
+    <h1>Vivek Sharma</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="experience.html">Experience</a>
-    <a href="projects.html">Projects</a>
-    <a href="blog.html">Blog</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
-    <button id="theme-toggle" aria-label="Toggle theme">Light Mode</button>
-  </nav>
+  <!-- Contact Form -->
+  <section class="contact-section">
+    <h2>Get in Touch</h2>
+    <form action="#" method="post">
+      <div>
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      </div>
+      <div>
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+      </div>
+      <button type="submit">Send Message</button>
+    </form>
 
-  <section class="blog-container">
-    <h2 class="blog-title">Blog</h2>
-    <div class="blog-content">
-      <div class="blog-photo">
-        <img src="image.jpeg" alt="Vivek Sharma - Digital Marketing Professional">
-      </div>
-      <div class="blog-text">
-        <p>
-          Hello! I’m <strong>Vivek Sharma</strong>, a passionate digital marketing professional based in <strong>Mohali, Punjab</strong>. 
-          Originally from <strong>Saharanpur, Uttar Pradesh</strong>, I come from a close-knit family that has always been my source of inspiration. 
-          With an MCA degree and a growing interest in technology and creativity, I have immersed myself in the world of SEO, analytics, and digital branding.
-        </p>
-        <p>
-          My professional focus lies in <strong>SEO strategies, content creation, social media management, and analytics</strong>. 
-          I enjoy finding the balance between creativity and technical data-driven decisions to help brands grow their presence online.
-          I am currently an intern at Shivah Web Tech, learning the core of digital marketing and gaining hands-on experience with real-world projects.
-        </p>
-        <p>
-          Life outside work is just as important to me. I love <strong>listening to music, playing volleyball, and exploring new tools</strong>. 
-          These hobbies keep me balanced and motivated, pushing me to be a better version of myself. 
-          Coming from a <strong>nuclear family</strong>, with a retired father from the Indian Army and a homemaker mother, 
-          I have learned the value of discipline, hard work, and patience. My siblings also inspire me with their dedication to their respective fields.
-        </p>
-        <p>
-          Through this blog, I want to share my journey — the ups and downs, lessons learned, and skills I am developing. 
-          My posts will talk about topics such as <strong>how SEO works, why personal branding matters, how small businesses can use social media effectively, 
-          and ways to stay motivated in a fast-paced digital world</strong>.
-        </p>
-        <p>
-          This website is more than just a portfolio. It is my way of documenting progress and encouraging others who are passionate about building 
-          a career in the tech and marketing industry. I believe continuous learning and collaboration are the keys to success, and 
-          I aim to connect with people who share the same passion.
-        </p>
-        <p>
-          Thank you for visiting my blog — whether you are a student, professional, or just curious about digital marketing, 
-          I hope you find my journey relatable and insightful. Let’s grow and learn together!
-        </p>
-      </div>
+    <!-- Social Buttons -->
+    <div class="social-links">
+      <a href="https://wa.me/919012285865" target="_blank">WhatsApp</a>
+      <a href="https://instagram.com/vivvek._.sharma" target="_blank">Instagram</a>
+      <a href="https://facebook.com/" target="_blank">Facebook</a>
+      <a href="sms:+919012285865">SMS</a>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
-    &copy; <span id="year"></span> Vivek Sharma. All rights reserved.
+    © 2025 Vivek Sharma | Digital Marketing
   </footer>
-
-  <script>
-    const toggleButton = document.getElementById('theme-toggle');
-    const body = document.body;
-
-    toggleButton.addEventListener('click', () => {
-      body.classList.toggle('light');
-      body.classList.toggle('dark');
-      toggleButton.textContent = body.classList.contains('light') ? 'Dark Mode' : 'Light Mode';
-    });
-
-    // Auto year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 
 </body>
 </html>
