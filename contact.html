@@ -3,10 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="description" content="Stay updated with the latest digital marketing trends. Read Vivek Sharma’s blog on SEO techniques, PPC optimization, content strategy, and real-world tips.">
+  <meta name="keywords" content="SEO, Digital Marketing, PPC, Content Marketing, Vivek Sharma, Blogging">
   <meta property="og:title" content="Digital Marketing Blog | SEO Tips, PPC Guides & Case Studies" />
   <meta property="og:description" content="Stay updated with the latest digital marketing trends. Read Vivek Sharma’s blog on SEO techniques, PPC optimization, content strategy, and real-world tips."/>
   <meta property="og:url" content="https://viveksharma90122-arch.github.io/digital-marketing/blog.html" />
   <meta property="og:image" content="https://viveksharma90122-arch.github.io/digital-marketing/og-banner.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Digital Marketing Blog | SEO Tips, PPC Guides & Case Studies">
+  <meta name="twitter:description" content="Stay updated with the latest digital marketing trends. Read Vivek Sharma’s blog on SEO techniques, PPC optimization, content strategy, and real-world tips.">
+  <meta name="twitter:image" content="https://viveksharma90122-arch.github.io/digital-marketing/og-banner.jpg">
+
   <title>Digital Marketing Blog | SEO Tips, PPC Guides & Case Studies</title>
   <link rel="icon" type="image/png" href="favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -120,14 +128,14 @@
     <a href="blog.html">Blog</a>
     <a href="services.html">Services</a>
     <a href="contact.html">Contact</a>
-    <button id="theme-toggle">Light Mode</button>
+    <button id="theme-toggle" aria-label="Toggle theme">Light Mode</button>
   </nav>
 
   <section class="blog-container">
     <h2 class="blog-title">Blog</h2>
     <div class="blog-content">
       <div class="blog-photo">
-        <img src="image.jpeg" alt="Vivek Sharma">
+        <img src="image.jpeg" alt="Vivek Sharma - Digital Marketing Professional">
       </div>
       <div class="blog-text">
         <p>
@@ -165,7 +173,7 @@
   </section>
 
   <footer>
-    &copy; 2025 Vivek Sharma. All rights reserved.
+    &copy; <span id="year"></span> Vivek Sharma. All rights reserved.
   </footer>
 
   <script>
@@ -177,6 +185,9 @@
       body.classList.toggle('dark');
       toggleButton.textContent = body.classList.contains('light') ? 'Dark Mode' : 'Light Mode';
     });
+
+    // Auto year
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 
 </body>
